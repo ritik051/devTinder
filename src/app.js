@@ -3,17 +3,25 @@ const express =  require('express');
 const app = express();
 
 
-app.use('/hello',(req,res) => {
-    res.send('Hello from hello express server');
+app.get('/user',(req,res) => {
+    res.send({"firstName":"John","lastName":"Doe"});
 });
 
-app.use('/test',(req,res) => {
-    res.send('Hello from test express server');
+app.post('/user',(req,res) => {
+    res.send('data successfully added to database');
 });
-//routes<-|   |->routes handler
-app.use('/',(req,res) => {
-    res.send('Hello from home express server');
+
+app.delete('/user',(req,res) => {
+    res.send('data successfully deleted from database');
 });
+
+app.put('/user',(req,res) => {
+    res.send('data successfully updated in database');
+});
+//  routes<-|     |->routes handler
+// app.use('/',(req,res) => {
+//     res.send('Hello from home express server');
+// });
 
 app.listen(9999 , () => {
     console.log('Server is running on port 9999');
