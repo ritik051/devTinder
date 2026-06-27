@@ -1,0 +1,21 @@
+{
+  "name": "devtinder_backend",
+  "version": "1.0.0",
+  "description": "this is for developers ",
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "express"
+  ],
+  "license": "ISC",
+  "author": "Ritik Kumar Gupta",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
